@@ -2,7 +2,7 @@
 Now that we have an simplified OS with a number of useful base classes, we need to implement resource sharing for our threads. Because the threads can be switched by the OS preemptively, a thread must be able to lock a particular device/resource such as the `CHUARTController` or the `CTWController`, until the device is in a clean state. By clean state I simply mean that any other thread running on the system can access that device/resource without any context of what was happening before. In the two examples above, this typically means receiving or sending data.
 
 ## Instructions
-1. I have put updated versions of the `CHUARTController` and `CTWController` in my Dropbox, use these to replace the versions in the MWE that you working on: https://dl.dropboxusercontent.com/u/34090710/controllers.tar.gz
+1. Replace the versions of `CHUARTController` and `CTWController` in the MWE with the ones from [this directory](../code/updated-controllers)
 2. [Optional] This code is a bit of mess. It may help to clean it up a bit as I have just taken it from the Arduino project and tried to simply it / remove dependencies. For example, I think there is some double buffering in `CTWController` which could be removed.
 3. We need to modify these classes to make them lockable. My approach would be to have these classes inherit from `CResource` so that we are able to do the following in code.
 	
