@@ -11,7 +11,7 @@ In this part of the project, we want to reorganise the code base into C++ classe
 3. Please note that I use the baud rate of 57600 in the code base as I found this to be more reliable on the smartblock. Since your bootloader is probably working at 115200, you will probably have to use that value for avrdude
 4. Sources for the MWE and Toolchain are as follows:
  * [Tool chain](https://dl.dropboxusercontent.com/u/34090710/toolchain.tar.gz)
- * [MWE source code](https://dl.dropboxusercontent.com/u/34090710/codebase-source.tar.gz)
+ * [MWE source code](../code/mwe)
 5. Once my MWE is working, you can start adding classes to it, such as `CSystem`, `CTask`, and `CResource` etc. Eventually getting to the point where you have a similar example to what you had running in [Part II](./Project-Part-II:-Uploading-and-Running-AVR-OS.md).
 
 ## Questions, Issues and Problems
