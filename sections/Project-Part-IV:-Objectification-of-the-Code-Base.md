@@ -12,7 +12,7 @@ In this part of the project, we want to reorganise the code base into C++ classe
 4. Sources for the MWE and Toolchain are as follows:
  * [Tool chain](https://dl.dropboxusercontent.com/u/34090710/toolchain.tar.gz)
  * [MWE source code](https://dl.dropboxusercontent.com/u/34090710/codebase-source.tar.gz)
-5. Once my MWE is working, you can start adding classes to it, such as `CSystem`, `CTask`, and `CResource` etc. Eventually getting to the point where you have a similar example to what you had running in [[Part II|Project-Part-II:-Uploading-and-Running-AVR-OS]]. 
+5. Once my MWE is working, you can start adding classes to it, such as `CSystem`, `CTask`, and `CResource` etc. Eventually getting to the point where you have a similar example to what you had running in [Part II](./Project-Part-II:-Uploading-and-Running-AVR-OS.md).
 
 ## Questions, Issues and Problems
 
