@@ -1,6 +1,6 @@
 ## Literature Review ##
 
-0. [Building virtual structures with physical blocks](http://depts.washington.edu/dmgftp/publications/uist04/uist_papers/Building%20Virtual%20Structures%20With%20Physical%20Blocks.pdf)
+1. [Building virtual structures with physical blocks](http://depts.washington.edu/dmgftp/publications/uist04/uist_papers/Building%20Virtual%20Structures%20With%20Physical%20Blocks.pdf)
 0. [Boda Blocks : A Collaborative Tool for Exploring Tangible Three- Dimensional Cellular Automata](http://web.media.mit.edu/~leah/publications/buechley_CSCL_07.pdf)
 0. [Robot pebbles: One centimeter modules for programmable matter through self-disassembly](http://cba.mit.edu/docs/papers/10.05.knaian.ICRA.pdf)
 0. [A distributed algorithm for 2D shape duplication with smart pebble robots](https://groups.csail.mit.edu/drl/wiki/images/5/59/Gilpin-ICRA12-2DDuplication.pdf)
