@@ -4,7 +4,7 @@ In this section of the project we must perform simultaneous communication betwee
 ## Instructions
 1. The port controller is used to select one of the connected faces. Once a connected face is selected, the `CTWController` can be used via the `CLEDController` and the `CNFCController` to configure and control the LEDs and the NFC transciever on that face. The first step will be to modify the `CPortController` such that it can be _locked_ by a task running in the OS.
 
-2. To test if the port controller is working correctly, create a simple task that configures the colors of each LED on each face of the block. Depending on how the system for locking resources such as the `CTWController` works, you may need to make `CPortController` and `CLEDController` lockable as well, and have them in turn lock the `CTWController`. You may find the following code useful for configuring the LEDs.
+2. To test if the port controller is working correctly, create a simple task that configures the colors of each LED on each face of the block. Depending on how the system for locking resources such as the `CTWController` works, you may need to make `CPortController` and `CLEDController` lockable as well, and have them in turn lock the `CTWController`. You may find the following code useful for configuring the LEDs. You should set the mode of the LEDs before setting the color. The mode should be set to `CLEDController::EMode::PWM`.
 
 ```c++
 #define RGB_RED_OFFSET    0
@@ -17,7 +17,6 @@ In this section of the project we must perform simultaneous communication betwee
 /***********************************************************/
 
 void SetAllColorsOnFace(uint8_t unRed, uint8_t unGreen, uint8_t unBlue) {
-
    for(uint8_t unLedIdx = 0; unLedIdx < RGB_LEDS_PER_FACE; unLedIdx++) {
       CLEDController::SetBrightness(unLedIdx * RGB_LEDS_PER_FACE +
                                     RGB_RED_OFFSET, unRed);
@@ -31,7 +30,6 @@ void SetAllColorsOnFace(uint8_t unRed, uint8_t unGreen, uint8_t unBlue) {
 /***********************************************************/
 
 void SetAllModesOnFace(CLEDController::EMode e_mode) {
-
    for(uint8_t unLedIdx = 0; unLedIdx < RGB_LEDS_PER_FACE; unLedIdx++) {
       CLEDController::SetMode(unLedIdx * RGB_LEDS_PER_FACE 
                               + RGB_RED_OFFSET, e_mode);
