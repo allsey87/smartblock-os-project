@@ -52,7 +52,6 @@ void SetAllModesOnFace(CLEDController::EMode e_mode) {
 
 6. To test the integration of the `CNFCController` into the operating system code, create a simple task which checks the `CPortController` for interrupts every 5-10 ms. If an interrupt is detected, spawn a new task to handle receiving this message. Upon receiving a message, print the (i) port number, (ii) system time, and (iii) message contents to the `CHUARTController` before terminating this task. For this test, it is recommended to have one block running the OS, and the other running the older firmware, which interactive and controllable over USB.
 
-7. If simultaneous communication is working as expected, it should be possible to recieve a message on two faces almost at the same time.
+7. If simultaneous communication is working as expected, it should be possible to recieve a message on two faces almost at the same time. As in the following diagram, setup an experiment using three blocks. Each of these blocks should be connected to a PC (or multiple PCs if this is easier) using USB cables. To complete this experiment, send the keystroke `t` to blocks A and C, which are running the old interactive firmware. This will trigger blocks A and C to send an NFC message to block B at almost the same time. If everything works correctly, the operating system will create two tasks to handle the inbound NFC messages and print them to the `CHUARTController`, automatically locking and unlocking the `CTWController` as required.
 
-
-![Block and Development PC setup](./Project-Part-VI:-Simultaneous-Communication.png)
+![Block and development PC setup](./Project-Part-VI:-Simultaneous-Communication.png "Block and development PC setup")
