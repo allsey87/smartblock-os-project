@@ -4,14 +4,14 @@ This part of the project is somewhat flexible, although a more sophisticated dem
 To complete this section, control or monitoring of a remote structure must be demonstrated. This could be achieved through a combination of:
 
 1. controlling the LEDs on any block,
-2. reading the value of accelerometers on any block,
+2. reading the value of accelerometers on any block, or
 3. displaying the connectivity of the structure on a remote PC.
 
 The remote link is provided using an Xbee module, a small radio based on the Zigbee standard, for which there is a slot on the smartblock board.
 
 ## Instructions
 
-The code to initialize use the Xbee module is provided as part of the [original firmware](https://github.com/allsey87/smartblock-bsp). It is recommended to study and test this code before integrating it into the OS. The Xbee communicates with the microcontroller using the `CTUARTController`. This is a virtual UART port based on the microcontroller's 16-bit timer. Similar to the `CHUARTController`, you will need to import this driver into your source code and probably modify it in order for it to be shareable amongst the tasks, which are running concurrently.
+The code to initialize and use the Xbee module is provided as part of the [original firmware](https://github.com/allsey87/smartblock-bsp). It is recommended to study and test this code before integrating it into the OS. The Xbee communicates with the microcontroller using the `CTUARTController`. This is a virtual UART port based on the microcontroller's 16-bit timer. Similar to the `CHUARTController`, you will need to import this driver into your source code and probably modify it in order for it to be shareable amongst the tasks, which are running concurrently.
 
 The following sections propose three configurations, increasing in complexity. Starting by implementing the first configuration and extending the code to support the later configurations is recommended.
 
